@@ -15,10 +15,15 @@ export default function Cart() {
   //   console.log(index)
   //   dispatch({type:"REMOVE",index:index})
   // }
+
+
 const handleCheckOut = async()=>{
   let userEmail =localStorage.getItem("userEmail");
   //console.log("This is users email :",userEmail);
-  let response = await fetch ("http://localhost:5000/api/orderData", {
+  let response = await fetch ("https://foodexpress-web.onrender.com/api/orderData"
+  , {
+
+
     method: "POST",
     headers: {
       "Content-Type": "Application/json"
